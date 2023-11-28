@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background : linear-gradient(#222 , #444);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255,0.2) ;
+    overflow: hidden;
+}
+
+/*=============Cercle Methode 1==============*/
+body::after{
+    content: "";
+    width: 90vh ; /*  90 % mel height mta3 el body  */
+    height: 90vh; /*   90 % mel height mta3 el body  */
+    background-color: #3700ff;
+    position: fixed;
+    border-radius: 91vh;
+    right: -30vh;
+    bottom: -20vh;
+    z-index: -1;
+}
+
+/*=============Cercle Methode 2==============*/
+/* body::after{
+    content: "";
+    width: 100% ; 
+    height: 100%; 
+    background-color: rgba(0, 119, 255, 0.998);
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+}*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin:  auto;
+    padding: 20px 0;
+}
+
+nav .logo{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+}
+
+nav ul li{
+display: inline-block;
+margin: 0 5px;
+}
+
+nav ul li a{
+    color: aliceblue;
+    text-decoration:  none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+nav ul li a:hover{
+    color: #3700ff;
+}
+
+.content{
+    height: 90%;
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.text{
+    width: 50%;
+}
+
+.text p{
+    color: aliceblue;;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.text h2{
+color: #fff;
+}
+
+.image{
+    width: 40%;
+}
+
+.image img{
+    width: 100%;
+}
+
+/*=======================Mrdia Query==================*/
+@media (max-width:950px) {
+.content{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px 5px;
+}
+
+.image{
+    width: 90%;
+}
+
+.text{
+    width: 90%;
+}
+
+nav{
+    flex-direction: column;
+}
+}
+

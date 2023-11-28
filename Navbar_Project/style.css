@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui ;
+}
+
+body{
+    background: linear-gradient(rgb(48, 2, 71),rgb(7, 1, 70));
+    height: 100vh;
+}
+
+section{
+    background-image: url(stars1.png) ;
+    background-size: contain;
+    background-repeat: repeat-x repeat-y;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    text-align: center;
+    list-style: none;
+}
+
+li{
+    margin: 14px 0;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    background-color: darkblue;
+    padding: 6px 15px;
+    border-radius: 20px;
+    display: inline-block; /* Radineh (inline-block) 5atro element (inline) matnajamch ta3tih margin w hover */
+    width: 120px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    position: relative; /* 3tito (realative) bech najam na3tih z-index */
+    z-index: 10;        /* 3tito (z-index) bech yodh'hor howa fo9 el lektiba w ma t8atich 3lih */  
+}
+
+ul:hover li a{ /*-A) Kif na3mal hover 3al (ul) => A3mali effet 3al (a) */
+    opacity: 0;
+}
+
+ul li a:hover{ /*-B) lezem hethhi tji ba3 el (A) si nn ma ye5dmch el effet */
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+ul li::after{
+    content: attr(data-text);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;/* ne77it les events mta3 l curseur bech ki net3ada fo9ha bel curseur ma ta3malich mochkla */
+    letter-spacing: 50px;
+    transition: 0.6s;
+}
+
+ul li:hover::after{/* Kif na3mal hover 3al (li) => A3mali effet 3al (after) */
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+
+ul li::before{
+    content: "";
+    width: 140px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,60%);
+    box-shadow: 0 0 80px orangered;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+ul li:hover::before{/* Kif na3mal hover 3al (li) => A3mali effet 3al (before) */
+    width: 80px;
+    opacity: 1;
+}

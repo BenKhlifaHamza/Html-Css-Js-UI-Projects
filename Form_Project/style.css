@@ -1,0 +1,48 @@
+body{
+    height: 100vh;
+    background-color: #234;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 80%;
+    background-color:rgba(51, 68, 85, 0.53);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap ;
+    gap : 5px
+}
+
+form input{
+    background-color: rgba(17, 34, 51, 0.258);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: aliceblue;
+    flex-basis: 150px;
+    flex-grow: 1 ;
+}
+
+form input:focus{
+    outline-color:   rgb(96, 132, 169);
+    outline-style: groove;
+}
+
+form button{
+    background-color: #234 ;
+    color: aliceblue;
+    border: 2px solid rgb(96, 132, 169);
+    border-radius: 10px;
+    cursor: pointer;
+    flex-basis: 30px;
+    flex-grow: 1;
+    transition: 0.4s;
+}
+
+form button:hover{
+    background-color: aliceblue ;
+    color: #234;
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Rubik:wght@300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap');
+
+*{
+    margin: 0 0 ;
+    padding: 0 0;
+    font-family: 'Ubuntu';
+}
+
+body{
+    background-image: linear-gradient(to right ,#01022d , #000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-image: 
+    linear-gradient(to right , #01022de5 30% , #0000006a ),url(avatar.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:  95%;
+    height: 90%;
+    border-radius: 20px;
+}
+
+.container:hover{
+    background-image: 
+    linear-gradient(to right , #01022de5 30% , transparent ),url(avatar.webp);
+}
+
+header{
+    margin-left: 40px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    border-bottom: 2px solid transparent;
+    transition: 0.4s;
+}
+
+header ul li a:hover{
+    color: aqua;
+    border-bottom: 2px solid aqua;
+}
+
+header > a{
+    text-decoration: none;
+    color: aqua;
+    font-weight: bold;
+    font-size: 26px;
+    transition: 0.4s;
+}
+
+header > a:hover{
+    color: white;
+}
+
+.content{
+    width: 50%;
+    height: 90%;
+    margin-left: 40px;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content p{
+    color: aliceblue;
+}
+
+.content h2{
+    font-size: 96px;
+    letter-spacing: 5px;
+    color: aliceblue;
+    text-transform: uppercase;
+
+}
+
+.content button{
+    width: 40%;
+    padding: 8px;
+    color: #01022de5;
+    background-color: aqua ; 
+    border: 2px solid  transparent;
+    border-radius: 10px;
+    font-size:x-large;
+    font-weight: 600;
+    transition: 0.4s;
+
+}
+
+.content button:hover{
+    color: aqua;
+    background-color:transparent ;
+    border: 2px solid aqua ;
+    cursor: pointer;
+}
+
+@media (max-width: 415px){
+    .content h2{
+        font-size: 72px;
+    }
+    .content{
+        width: 80%;
+        margin: 0 0;
+        padding: 0 10px;
+    }
+    .content button{
+        width: auto;
+    }
+    header{
+        margin: 0 0;
+        padding: 10px 10px;
+        flex-direction: column;
+    }
+    header ul{
+        margin-top: 10px;
+        width: 90%;
+        justify-content: space-between;
+    }
+}
+
